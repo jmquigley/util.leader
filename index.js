@@ -13,7 +13,15 @@ module.exports = function(msg, opts = undefined) {
 
     let arr = [];
 
-    _.times(opts.leadingLines, function() {
+    if (opts.leadingLines < 0) {
+        opts.leadingLines = 0;
+    }
+
+    if (opts.trailingLines < 0) {
+        opts.trailingLines = 0;
+    }
+
+    _.times(Math.round(opts.leadingLines), function() {
         arr.push('');
     });
 
@@ -21,7 +29,7 @@ module.exports = function(msg, opts = undefined) {
     arr.push(msg);
     arr.push(opts.chevron.repeat(msg.length));
 
-    _.times(opts.trailingLines, function() {
+    _.times(Math.round(opts.trailingLines), function() {
         arr.push('');
     });
 
