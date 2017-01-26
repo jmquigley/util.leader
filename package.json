@@ -12,6 +12,7 @@
   "bugs": {
     "url": "https://github.com/jmquigley/util.leader/issues"
   },
+  "readmeFilename": "README.md",
   "engines": {
     "node": ">=6.5"
   },
