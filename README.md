@@ -43,15 +43,13 @@ This would print the same sample message above.
 ## Configuration
 
 The output for the leader can be changed with options to the `leader` function:
-
-    opts = {
+    
+    leader("A message", {
         chevron: '*',
         log: console.log,
         leadingLines: 2,
         trailingLines: 1
-    };
-    
-    leader("A message", opts)
+    })
 
 
 #### options
@@ -71,7 +69,7 @@ Default: `console.log`
 Allows one to change the default logger facility.
 
 
-##### leadingLins
+##### leadingLines
 
 Type: `number`  
 Default: `2`
