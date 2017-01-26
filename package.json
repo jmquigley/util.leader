@@ -1,61 +1,61 @@
 {
-	"name": "util.leader",
-	"version": "0.0.7",
-	"author": "jmquigley <jmquigley@outlook.com>",
-	"description": "Writes a leader/banner to the given logger",
-	"private": false,
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/jmquigley/util.leader"
-	},
-	"bugs": {
-		"url": "https://github.com/jmquigley/util.leader/issues"
-	},
-	"readmeFilename": "README.md",
-	"engines": {
-		"node": ">=6.5"
-	},
-	"dependencies": {
-		"lodash": "^4.17.4",
-		"object-assign": "^4.1.1",
-		"fs-extra": "^2.0.0"
-	},
-	"devDependencies": {
-		"ava": "^0.17.0",
-		"xo": "^0.17.1"
-	},
-	"main": "index.js",
-	"bin": {
-		"leader": "./cli.js"
-	},
-	"scripts": {
-		"test": "xo && ava --verbose"
-	},
-	"xo": {
-		"env": {
-			"browser": true,
-			"node": true,
-			"es6": true
-		},
-		"global": [
-			"window",
-			"describe",
-			"it",
-			"JSON"
-		],
-		"rules": {
-			"space-before-function-paren": "off",
-			"unicorn/filename-case": [
-				"error",
-				{
-					"case": "snakeCase"
-				}
-			],
-			"arrow-parens": [
-				"error",
-				"as-needed"
-			]
-		}
-	}
+  "name": "util.leader",
+  "version": "0.0.8",
+  "author": "jmquigley <jmquigley@outlook.com>",
+  "description": "Writes a leader/banner to the given logger",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmquigley/util.leader"
+  },
+  "bugs": {
+    "url": "https://github.com/jmquigley/util.leader/issues"
+  },
+  "readmeFilename": "README.md",
+  "engines": {
+    "node": ">=6.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "object-assign": "^4.1.1",
+    "fs-extra": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.1"
+  },
+  "main": "index.js",
+  "bin": {
+    "leader": "./cli.js"
+  },
+  "scripts": {
+    "test": "xo && ava --verbose"
+  },
+  "xo": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "global": [
+      "window",
+      "describe",
+      "it",
+      "JSON"
+    ],
+    "rules": {
+      "space-before-function-paren": "off",
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "snakeCase"
+        }
+      ],
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ]
+    }
+  }
 }
