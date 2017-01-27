@@ -1,4 +1,4 @@
-# util.leader [![Build Status](https://travis-ci.org/jmquigley/util.leader.svg?branch=master)](https://travis-ci.org/jmquigley/util.leader) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![NPM](https://img.shields.io/badge/npm-v0.0.9-blue.svg)](https://www.npmjs.com/package/util.leader)
+# util.leader [![Build Status](https://travis-ci.org/jmquigley/util.leader.svg?branch=master)](https://travis-ci.org/jmquigley/util.leader) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![NPM](https://img.shields.io/npm/v/util.leader.svg)](https://www.npmjs.com/package/util.leader) [![Coverage Status](https://coveralls.io/repos/github/jmquigley/util.leader/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.leader?branch=master)
 
 > Writes a leader/banner to the given logger
 
