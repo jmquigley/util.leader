@@ -17,9 +17,12 @@
     "node": ">=6.5"
   },
   "dependencies": {
+    "expand-home-dir": "0.0.3",
+    "fs-extra": "^2.0.0",
     "lodash": "^4.17.4",
     "object-assign": "^4.1.1",
-    "fs-extra": "^2.0.0"
+    "util.rstrip": "0.0.3",
+    "yargs": "^6.6.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",
@@ -32,8 +35,9 @@
     "leader": "./cli.js"
   },
   "scripts": {
-    "test": "xo && ./node_modules/.bin/nyc ava --verbose",
-    "report": "./node_modules/.bin/nyc report --reporter=html"
+    "postinstall": "node cmd.js --postinstall",
+    "test": "node cmd.js --testing",
+    "report": "node cmd.js --reporting"
   },
   "xo": {
     "env": {
