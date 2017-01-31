@@ -1,6 +1,6 @@
 {
   "name": "util.leader",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Writes a leader/banner to the given logger",
   "private": false,
@@ -35,12 +35,12 @@
   "bin": {
     "leader": "./cli.js"
   },
-	"scripts": {
-		"postinstall": "pkgwrap --postinstall",
-		"test": "pkgwrap --testing",
-		"report": "pkgwrap --reporting",
-		"coverage": "pkgwrap --coverage"
-	},
+  "scripts": {
+    "postinstall": "pkgwrap --postinstall",
+    "test": "pkgwrap --testing",
+    "report": "pkgwrap --reporting",
+    "coverage": "pkgwrap --coverage"
+  },
   "xo": {
     "env": {
       "browser": true,
