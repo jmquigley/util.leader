@@ -30,7 +30,7 @@ An example of the output is:
     > *********************
     >
 
-Note that the `>` will NOT be printed with the default output.  The default is to print two blank lines before the message and one blank line after.  This behaviro can be changed.  Once installed this can also be used from the command line:
+Note that the `>` will NOT be printed with the default output.  The default is to print two blank lines before the message and one blank line after.  This behavior can be changed.  Once installed this can also be used from the command line:
 
 ```
 leader This is a test leader
