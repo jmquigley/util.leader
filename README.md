@@ -20,7 +20,7 @@ $ npm install --save-dev util.leader
 
     const leader = require('util.leader');
     leader('This is a test leader');
-   
+
 An example of the output is:
 
     >
@@ -32,54 +32,34 @@ An example of the output is:
 
 Note that the `>` will NOT be printed with the default output.  The default is to print two blank lines before the message and one blank line after.  This behaviro can be changed.  Once installed this can also be used from the command line:
 
-    leader This is a test leader
- 
-    OR
-    
-    leader "This is a test leader"
+```
+leader This is a test leader
+```
+
+OR
+
+```
+leader "This is a test leader"
+```
 
 This would print the same sample message above.
 
 ## Configuration
 
 The output for the leader can be changed with options to the `leader` function:
-    
-    leader("A message", {
-        chevron: '*',
-        log: console.log,
-        leadingLines: 2,
-        trailingLines: 1
-    })
 
+```
+leader("A message", {
+    chevron: '*',
+    log: console.log,
+    leadingLines: 2,
+    trailingLines: 1
+})
+```
 
 #### options
 
-##### chevron
-
-Type: `string`  
-Default: `'*'`
-
-The character used to draw the over/under line.
-
-##### log
-
-Type: `object`  
-Default: `console.log`
-
-Allows one to change the default logger facility.
-
-
-##### leadingLines
-
-Type: `number`  
-Default: `2`
-
-The number of blank lines in front of the banner message
-
-
-##### trailingLines
-
-Type: `number`  
-Default: `1`
-
-The number of blank lines after the banner message
+- `chevron {string} (default: '*')`: The character used to draw the over/under line.
+- `log {object} (default: 'console.log')`: Allows one to change the default logger facility.
+- `leadingLines {number}: (default: '2')`: The number of blank lines in front of the banner message
+- `trailingLines {number}: (default: '1')`: The number of blank lines after the banner message
