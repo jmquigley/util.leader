@@ -36,10 +36,10 @@
     "leader": "./cli.js"
   },
   "scripts": {
-    "postinstall": "pkgwrap --postinstall",
-    "test": "pkgwrap --testing",
-    "report": "pkgwrap --reporting",
-    "coverage": "pkgwrap --coverage"
+    "postinstall": "./node_modules/.bin/pkgwrap --postinstall",
+    "test": "./node_modules/.bin/pkgwrap --testing",
+    "report": "./node_modules/.bin/pkgwrap --reporting",
+    "coverage": "./node_modules/.bin/pkgwrap --coverage"
   },
   "xo": {
     "env": {
