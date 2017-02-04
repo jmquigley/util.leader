@@ -22,11 +22,11 @@
     "lodash": "^4.17.4",
     "object-assign": "^4.1.1",
     "util.pkgwrap": "0.0.5",
-    "util.rstrip": "0.0.5",
+    "util.rstrip": "0.0.7",
     "yargs": "^6.6.0"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.18.1",
     "coveralls": "^2.11.15",
     "nyc": "^10.1.2",
     "xo": "^0.17.1"
