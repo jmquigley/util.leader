@@ -1,6 +1,6 @@
 {
   "name": "util.leader",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Writes a leader/banner to the given logger",
   "private": false,
@@ -25,8 +25,8 @@
     "coveralls": "^2.11.16",
     "mocha": "^3.2.0",
     "nyc": "^10.1.2",
-	  "tslint": "^4.5.1",
-	  "typescript": "^2.2.1",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1",
     "util.pkgwrap": "0.0.11"
   },
   "main": "./index.js",
@@ -35,12 +35,12 @@
     "leader": "./cli.js"
   },
   "scripts": {
-	  "all": "npm run lint && npm install && npm run build && npm test && npm run report",
-	  "build": "./node_modules/.bin/pkgwrap --build",
-	  "coverage": "./node_modules/.bin/pkgwrap --coverage",
-	  "lint": "./node_modules/.bin/pkgwrap --lint",
-	  "postinstall": "./node_modules/.bin/pkgwrap --postinstall",
-	  "report": "./node_modules/.bin/pkgwrap --reporting",
-	  "test": "./node_modules/.bin/pkgwrap --testing"
+    "all": "npm run lint && npm install && npm run build && npm test && npm run report",
+    "build": "./node_modules/.bin/pkgwrap --build",
+    "coverage": "./node_modules/.bin/pkgwrap --coverage",
+    "lint": "./node_modules/.bin/pkgwrap --lint",
+    "postinstall": "./node_modules/.bin/pkgwrap --postinstall",
+    "report": "./node_modules/.bin/pkgwrap --reporting",
+    "test": "./node_modules/.bin/pkgwrap --testing"
   }
 }
