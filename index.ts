@@ -1,17 +1,23 @@
 'use strict';
 
-const _ = require('lodash');
-const objectAssign = require('object-assign');
+import * as _ from 'lodash';
 
-module.exports = function(msg, opts = undefined) {
-	opts = objectAssign({
+export interface ILeaderOpts {
+	chevron?: string;
+	log?: any;
+	leadingLines?: number;
+	trailingLines?: number;
+}
+
+export function leader(msg: string, opts?: ILeaderOpts) {
+	opts = Object.assign({
 		chevron: '*',
 		log: console.log,
 		leadingLines: 2,
 		trailingLines: 1
 	}, opts);
 
-	let arr = [];
+	let arr: string[] = [];
 
 	if (opts.leadingLines < 0) {
 		opts.leadingLines = 0;
@@ -21,7 +27,7 @@ module.exports = function(msg, opts = undefined) {
 		opts.trailingLines = 0;
 	}
 
-	_.times(Math.round(opts.leadingLines), function() {
+	_.times(Math.round(opts.leadingLines), () => {
 		arr.push('');
 	});
 
@@ -29,15 +35,15 @@ module.exports = function(msg, opts = undefined) {
 	arr.push(msg);
 	arr.push(opts.chevron.repeat(msg.length));
 
-	_.times(Math.round(opts.trailingLines), function() {
+	_.times(Math.round(opts.trailingLines), () => {
 		arr.push('');
 	});
 
 	if (opts.log) {
-		arr.forEach(function(line) {
+		arr.forEach((line) => {
 			opts.log(line);
 		});
 	}
 
 	return arr;
-};
+}
