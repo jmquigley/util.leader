@@ -2,7 +2,7 @@
 
 'use strict';
 
-const leader = require('./index');
+import {leader} from './index';
 
 process.argv.shift();  // remove first "node" program
 process.argv.shift();  // remove the "cli" script reference
