@@ -1,6 +1,6 @@
 {
   "name": "util.leader",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Writes a leader/banner to the given logger",
   "private": false,
