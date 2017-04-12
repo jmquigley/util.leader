@@ -1,8 +1,9 @@
-# util.leader [![Build Status](https://travis-ci.org/jmquigley/util.leader.svg?branch=master)](https://travis-ci.org/jmquigley/util.leader) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![NPM](https://img.shields.io/npm/v/util.leader.svg)](https://www.npmjs.com/package/util.leader) [![Coverage Status](https://coveralls.io/repos/github/jmquigley/util.leader/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.leader?branch=master)
+# util.leader [![Build Status](https://travis-ci.org/jmquigley/util.leader.svg?branch=master)](https://travis-ci.org/jmquigley/util.leader) [![tslint code style](https://img.shields.io/badge/code_style-TSlint-5ed9c7.svg)](https://palantir.github.io/tslint/) [![Test Runner](https://img.shields.io/badge/testing-ava-blue.svg)](https://github.com/avajs/ava) [![NPM](https://img.shields.io/npm/v/util.leader.svg)](https://www.npmjs.com/package/util.leader) [![Coverage Status](https://coveralls.io/repos/github/jmquigley/util.leader/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.leader?branch=master)
 
 > Writes a leader/banner to the given logger
 
 This is a devops utility that prints *banner* information before tasks are executed.  It makes it easier to see each section from a build log.
+
 
 ## Installation
 
@@ -15,6 +16,12 @@ To install as a development dependency with cli:
 ```
 $ npm install --save-dev util.leader
 ```
+
+To build the app and run all tests:
+```
+$ npm run all
+```
+
 
 ## Example Usage
 

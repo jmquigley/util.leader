@@ -17,7 +17,7 @@ export function leader(msg: string, opts?: ILeaderOpts) {
 		trailingLines: 1
 	}, opts);
 
-	let arr: string[] = [];
+	const arr: string[] = [];
 
 	if (opts.leadingLines < 0) {
 		opts.leadingLines = 0;
@@ -40,7 +40,7 @@ export function leader(msg: string, opts?: ILeaderOpts) {
 	});
 
 	if (opts.log) {
-		arr.forEach((line) => {
+		arr.forEach(line => {
 			opts.log(line);
 		});
 	}
