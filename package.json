@@ -18,11 +18,11 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "util.pkgwrap": "0.0.27"
+    "util.pkgwrap": "0.0.43"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.64",
-    "@types/node": "^7.0.18",
+    "@types/node": "^7.0.21",
     "ava": "^0.19.1",
     "coveralls": "^2.13.1",
     "nyc": "^10.3.2",
@@ -35,12 +35,13 @@
     "leader": "./cli.js"
   },
   "scripts": {
-    "all": "npm install && npm run lint && npm run build && npm test && npm run report",
-    "build": "./node_modules/.bin/pkgwrap --build",
-    "coverage": "./node_modules/.bin/pkgwrap --coverage",
-    "lint": "./node_modules/.bin/pkgwrap --lint",
-    "postinstall": "./node_modules/.bin/pkgwrap --postinstall",
-    "report": "./node_modules/.bin/pkgwrap --reporting",
-    "test": "./node_modules/.bin/pkgwrap --testing --ava"
+    "all": "npm install && npm run clean && npm run lint && npm run build && npm test && npm run report",
+    "build": "pkgwrap --build",
+    "clean": "pkgwrap --clean",
+    "coverage": "pkgwrap --coverage",
+    "lint": "pkgwrap --lint",
+    "postinstall": "pkgwrap --postinstall",
+    "report": "pkgwrap --reporting",
+    "test": "pkgwrap --testing --ava"
   }
 }
