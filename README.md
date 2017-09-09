@@ -7,19 +7,21 @@ This is a devops utility that prints *banner* information before tasks are execu
 
 ## Installation
 
+This module uses [yarn](https://yarnpkg.com/en/) to manage dependencies and run scripts for development.
+
 To install as a global package and cli:
 ```
-$ npm install --global util.leader
+$ yarn global add util.leader
 ```
 
 To install as a development dependency with cli:
 ```
-$ npm install --save-dev util.leader
+$ yarn add --dev util.leader
 ```
 
 To build the app and run all tests:
 ```
-$ npm run all
+$ yarn run all
 ```
 
 
