@@ -27,7 +27,11 @@ $ yarn run all
 
 ## Example Usage
 
-    const leader = require('util.leader');
+    import leader from 'util.leader';
+    // import {leader} from 'util.leader';
+    // const leader = require('util.leader').default;
+    // const {leader} = require('util.leader');
+
     leader('This is a test leader');
 
 An example of the output is:
@@ -51,7 +55,21 @@ OR
 leader "This is a test leader"
 ```
 
-This would print the same sample message above.
+This would print the same sample message above.  The message to a leader can also span multiple lines
+
+```
+leader "Test message\nline 2\nline 3"
+```
+
+    >
+    >
+    > ************
+    > Test message
+    > line 2
+    > line 3
+    > ************
+    >
+
 
 ## Configuration
 

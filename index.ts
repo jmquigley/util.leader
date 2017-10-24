@@ -17,7 +17,7 @@ export function leader(msg: string, opts?: ILeaderOpts) {
 		trailingLines: 1
 	}, opts);
 
-	const arr: string[] = [];
+	let arr: string[] = [];
 
 	if (opts.leadingLines < 0) {
 		opts.leadingLines = 0;
@@ -31,9 +31,16 @@ export function leader(msg: string, opts?: ILeaderOpts) {
 		arr.push('');
 	});
 
-	arr.push(opts.chevron.repeat(msg.length));
-	arr.push(msg);
-	arr.push(opts.chevron.repeat(msg.length));
+	const lines: string[] = msg.split(/\r\n|\r|\n/);
+	let length: number = 0;
+
+	for (const line of lines) {
+		if (line.length > length) length = line.length;
+	}
+
+	arr.push(opts.chevron.repeat(length));
+	arr = arr.concat(lines);
+	arr.push(opts.chevron.repeat(length));
 
 	_.times(Math.round(opts.trailingLines), () => {
 		arr.push('');
@@ -47,3 +54,5 @@ export function leader(msg: string, opts?: ILeaderOpts) {
 
 	return arr;
 }
+
+export default leader;
