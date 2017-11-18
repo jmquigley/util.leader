@@ -18,16 +18,16 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "util.pkgwrap": "0.0.72"
+    "util.pkgwrap": "0.0.73"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.78",
-    "@types/node": "^8.0.46",
+    "@types/lodash": "^4.14.85",
+    "@types/node": "^8.0.53",
     "ava": "^0.23.0",
     "coveralls": "^3.0.0",
-    "nyc": "^11.2.1",
+    "nyc": "^11.3.0",
     "tslint": "^5.8.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.6.1"
   },
   "main": "./index.js",
   "types": "./index.d.ts",
