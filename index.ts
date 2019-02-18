@@ -1,21 +1,24 @@
-'use strict';
+"use strict";
 
-import * as _ from 'lodash';
+import * as _ from "lodash";
 
-export interface ILeaderOpts {
+export interface LeaderOpts {
 	chevron?: string;
 	log?: any;
 	leadingLines?: number;
 	trailingLines?: number;
 }
 
-export function leader(msg: string, opts?: ILeaderOpts) {
-	opts = Object.assign({
-		chevron: '*',
-		log: console.log,
-		leadingLines: 2,
-		trailingLines: 1
-	}, opts);
+export function leader(msg: string, opts?: LeaderOpts) {
+	opts = Object.assign(
+		{
+			chevron: "*",
+			log: console.log,
+			leadingLines: 2,
+			trailingLines: 1
+		},
+		opts
+	);
 
 	let arr: string[] = [];
 
@@ -28,7 +31,7 @@ export function leader(msg: string, opts?: ILeaderOpts) {
 	}
 
 	_.times(Math.round(opts.leadingLines), () => {
-		arr.push('');
+		arr.push("");
 	});
 
 	const lines: string[] = msg.split(/\r\n|\r|\n/);
@@ -43,11 +46,11 @@ export function leader(msg: string, opts?: ILeaderOpts) {
 	arr.push(opts.chevron.repeat(length));
 
 	_.times(Math.round(opts.trailingLines), () => {
-		arr.push('');
+		arr.push("");
 	});
 
 	if (opts.log) {
-		arr.forEach(line => {
+		arr.forEach((line) => {
 			opts.log(line);
 		});
 	}
