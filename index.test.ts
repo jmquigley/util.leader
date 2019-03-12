@@ -1,6 +1,6 @@
 "use strict";
 
-import leader from "../index";
+import leader from "./index";
 
 test("Default leader output", () => {
 	const msg = "Test Leader Message";
