@@ -1,61 +1,59 @@
-"use strict";
-
 import * as _ from "lodash";
 
 export interface LeaderOpts {
-	chevron?: string;
-	log?: any;
-	leadingLines?: number;
-	trailingLines?: number;
+  chevron?: string;
+  log?: any;
+  leadingLines?: number;
+  trailingLines?: number;
 }
 
 export function leader(msg: string, opts?: LeaderOpts) {
-	opts = Object.assign(
-		{
-			chevron: "*",
-			log: console.log,
-			leadingLines: 2,
-			trailingLines: 1
-		},
-		opts
-	);
+  opts = Object.assign(
+    {
+      chevron: "*",
+      log: console.log,
+      leadingLines: 2,
+      trailingLines: 1
+    },
+    opts
+  );
 
-	let arr: string[] = [];
+  let arr: string[] = [];
 
-	if (opts.leadingLines < 0) {
-		opts.leadingLines = 0;
-	}
+  if (opts.leadingLines < 0) {
+    opts.leadingLines = 0;
+  }
 
-	if (opts.trailingLines < 0) {
-		opts.trailingLines = 0;
-	}
+  if (opts.trailingLines < 0) {
+    opts.trailingLines = 0;
+  }
 
-	_.times(Math.round(opts.leadingLines), () => {
-		arr.push("");
-	});
+  _.times(Math.round(opts.leadingLines), () => {
+    arr.push("");
+  });
 
-	const lines: string[] = msg.split(/\r\n|\r|\n/);
-	let length: number = 0;
+  const lines: string[] = msg.split(/\r\n|\r|\n/);
+  let length: number = 0;
 
-	for (const line of lines) {
-		if (line.length > length) length = line.length;
-	}
+  for (const line of lines) {
+    if (line.length > length) length = line.length;
+  }
 
-	arr.push(opts.chevron.repeat(length));
-	arr = arr.concat(lines);
-	arr.push(opts.chevron.repeat(length));
+  arr.push(opts.chevron.repeat(length));
+  arr = arr.concat(lines);
+  arr.push(opts.chevron.repeat(length));
 
-	_.times(Math.round(opts.trailingLines), () => {
-		arr.push("");
-	});
+  _.times(Math.round(opts.trailingLines), () => {
+    arr.push("");
+  });
 
-	if (opts.log) {
-		arr.forEach((line) => {
-			opts.log(line);
-		});
-	}
+  if (opts.log) {
+    arr.forEach(line => {
+      opts.log(line);
+    });
+  }
 
-	return arr;
+  return arr;
 }
 
 export default leader;
